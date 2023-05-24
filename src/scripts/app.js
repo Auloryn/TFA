@@ -97,8 +97,9 @@ document.getElementById('prev').addEventListener('click', function () {
 
 updateSlidePosition(); // Initialize slide positions when script loads
 
-//Section problèmes
-if (window.innerWidth <= 768) {
+//Section problèmes mobile
+let mm = gsap.matchMedia();
+mm.add("(max-width: 768px)", () => {
     let dot = document.querySelector(".dot4");
 
     gsap.to(dot, {
@@ -111,10 +112,10 @@ if (window.innerWidth <= 768) {
             scrub: true,
         },
     });
-}
+});
 
 //section problèmes desktop
-if (window.innerWidth > 768) {
+mm.add("(min-width: 768px)", () => {
     let dot = document.querySelector(".dot4");
 
     gsap.to(".scroll-container", {
@@ -130,7 +131,7 @@ if (window.innerWidth > 768) {
 
     gsap.to(dot, {
         scale: 10,
-        x: 600,
+        x: 700,
         duration: 2,
         scrollTrigger: {
             trigger: dot,
@@ -138,8 +139,8 @@ if (window.innerWidth > 768) {
             end: "bottom bottom",
         },
     });
-}
 
+});
 
 
 //CAROUSEL DESKTOP
