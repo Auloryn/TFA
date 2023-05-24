@@ -2,11 +2,11 @@ body {
     font-size: 20px;
     line-height: 31px;
     font-family: 'Mukta', sans-serif;
-    scroll-behavior: smooth;
     color: #512500;
     margin: 0;
     background-color: #FAF4ED;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 
 }
 
@@ -47,5 +47,23 @@ body {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         grid-column-gap: 22px;
+    }
+
+    .btn--up {
+        position: fixed;
+        z-index: 3;
+        height: 80px;
+        width: 60px;
+        bottom: 0;
+        right: 0;
+        background-image: url(../assets/images/prev_btn.svg);
+        background-size: 70px 50px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #DBBEA1;
+        border: none;
+        border-radius: 35% 50% 15%;
+        display: none;
+
     }
 }

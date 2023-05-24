@@ -31,11 +31,13 @@
       </div>
       <div class="nav-background"></div>
       <ul class="nav-links">
-        <li><a class="nav-link" href="#">Introduction</a></li>
-        <li><a class="nav-link" href="#">Rencontres</a></li>
-        <li><a class="nav-link" href="#">Problèmes</a></li>
-        <li><a class="nav-link" href="#">Solution</a></li>
+        <li><a class="nav-link" href="#intro">Introduction</a></li>
+        <li><a class="nav-link" href="#rencontres">Rencontres</a></li>
+        <li><a class="nav-link" href="#problemes">Problèmes</a></li>
+        <li><a class="nav-link" href="#solution">Solution</a></li>
         <li><a class="nav-link" href="#">Fonctionnalités</a></li>
+        <li><a class="nav-link" href="#">Élaboration</a></li>
+
       </ul>
       <div class="burger">
         <div class="line1"></div>
@@ -45,8 +47,9 @@
     </nav>
   </header>
   <main>
+    <button class="btn btn--up"></button>
     <!-- introduction -->
-    <section class="section section--intro">
+    <section class="section section--intro" id="intro">
       <ul class="intro__list">
         <h1 class="title">DOGWISE</h1>
         <p class="title title--under">Dog Breeders’ Web Information
@@ -75,7 +78,7 @@
   </main>
 
   <!-- Rencontres -->
-  <section class="section section--rencontres">
+  <section class="section section--rencontres" id="rencontres">
     <h2 class="title title--second">Rencontres</h2>
     <div class="carousel">
       <div class="slides-container">
@@ -203,7 +206,7 @@
   <!-- section problèmes -->
   <div class="scroll-container
   ">
-    <section class="section section--problemes">
+    <section class="section section--problemes" id="problemes">
       <h2 class="title title--second title--prob">Problèmes</h2>
       <div class="timeline-prob"></div>
       <div class="dot dot1"></div>
@@ -241,7 +244,7 @@
       </div>
 
     </section>
-    <section class="section section--selectionne">
+    <section class="section section--selectionne" id="select">
       <h2 class="title title--second title--select">Problème sélectionné</h2>
       <div class="timeline-select"></div>
       <div class="dot dot4"></div>
@@ -268,10 +271,27 @@
         pour accompagner les éleveurs canins dans la mise en place de ces nouvelles réglementations, tout en
         garantissant le bien-être des animaux et le respect des normes éthiques.
       </p>
-
-
     </section>
   </div>
+  <section class="section section--solution" id="solution">
+    <h2 class="title title--second">Solution</h2>
+    <img class="img" src="./assets/images/DEVICES_MOCKUP.png" alt="mockup dans un ordinateur">
+    <p class="text">
+      Un site web qui rassemble toutes les lois et réglementations relatives à l'élevage canin. Ce site serait une
+      ressource précieuse pour les éleveurs canins qui cherchent à respecter les réglementations en vigueur et à éviter
+      les problèmes liés à une non-conformité.
+      <br><br>
+      Le site serait facile à utiliser et contiendrait des informations précises et détaillées sur les exigences légales
+      en matière d'élevage canin. Les éleveurs pourraient vérifier si leur élevage est conforme aux lois actuelles et,
+      le cas échéant, apporter les modifications nécessaires pour se conformer aux exigences.
+      <br><br>
+      Je pense que ce site serait une solution efficace pour aider les éleveurs canins à naviguer dans les
+      réglementations complexes liées à leur activité. Il permettrait également aux autorités compétentes de mieux
+      contrôler et réglementer l'élevage canin, ce qui pourrait avoir des effets positifs sur la santé et le bien-être
+      des chiens et des éleveurs canins.
+
+    </p>
+  </section>
 </body>
 
 </html>

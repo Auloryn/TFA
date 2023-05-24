@@ -1,0 +1,19 @@
+.section--solution {
+    margin: 22px;
+    width: 100vw;
+    line-height: 1.4;
+    margin-top: -70vh;
+
+    .text {
+        grid-column: 4/8;
+        margin: 44px;
+
+    }
+
+    .img {
+        justify-self: center;
+        align-self: center;
+        grid-column: 1/4;
+
+    }
+}

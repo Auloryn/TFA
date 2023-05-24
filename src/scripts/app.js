@@ -132,6 +132,7 @@ mm.add("(min-width: 768px)", () => {
     gsap.to(dot, {
         scale: 10,
         x: 700,
+        y: -75,
         duration: 2,
         scrollTrigger: {
             trigger: dot,
@@ -193,6 +194,24 @@ function Previous(params) {
     } else {
 
     }
+}
 
+//Bouton qui remonte la page
+
+const btnUp = document.querySelector(".btn--up");
+btnUp.addEventListener('click', Up);
+
+window.onscroll = function () {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        btnUp.style.display = "block";
+    } else {
+        btnUp.style.display = "none";
+    }
+};
+
+function Up(params) {
+    if (btnUp) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
 }
