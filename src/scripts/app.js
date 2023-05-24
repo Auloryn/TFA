@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
     navSlide();
 });
 
+
+
 //CAROUSEL MOBILE
 let slideIndex = 0;
 let startX = 0; // To store the starting X position of the touch
@@ -39,9 +41,16 @@ const slides = document.querySelectorAll('.carousel_slides');
 const totalSlides = slides.length;
 
 function updateSlidePosition() {
-    const slideWidth = slides[0].offsetWidth;
-    let newTranslateX = -slideIndex * slideWidth;
-    document.querySelector('.slides-container').style.transform = `translateX(${newTranslateX}px)`;
+    if (window.innerWidth <= 768) {
+
+        const slideWidth = slides[0].offsetWidth;
+        let newTranslateX = -slideIndex * slideWidth;
+        document.querySelector('.slides-container').style.transform = `translateX(${newTranslateX}px)`;
+    } else {
+        document.querySelector('.slides-container').style.transform = 'none';
+
+    }
+
 }
 
 window.addEventListener('resize', updateSlidePosition); // Adjust slide positions when window is resized
@@ -89,60 +98,100 @@ document.getElementById('prev').addEventListener('click', function () {
 updateSlidePosition(); // Initialize slide positions when script loads
 
 //Section problèmes
-let dot = document.querySelector(".dot4");
+if (window.innerWidth <= 768) {
+    let dot = document.querySelector(".dot4");
 
-gsap.to(dot, {
-    scale: 80,
-    duration: 1,
-    scrollTrigger: {
-        trigger: dot,
-        start: "bottom 80%",
-        end: "top -800px",
-        scrub: true,
-    },
-});
+    gsap.to(dot, {
+        scale: 80,
+        duration: 1,
+        scrollTrigger: {
+            trigger: dot,
+            start: "bottom 80%",
+            end: "top -800px",
+            scrub: true,
+        },
+    });
+}
+
+//section problèmes desktop
+if (window.innerWidth > 768) {
+    let dot = document.querySelector(".dot4");
+
+    gsap.to(".scroll-container", {
+        x: -window.innerWidth,
+        scrollTrigger: {
+            trigger: ".scroll-container",
+            start: "top top",
+            scrub: true,
+            pin: true,
+        },
+
+    });
+
+    gsap.to(dot, {
+        scale: 10,
+        x: 600,
+        duration: 2,
+        scrollTrigger: {
+            trigger: dot,
+            start: "left 50vh",
+            end: "bottom bottom",
+        },
+    });
+}
+
 
 
 //CAROUSEL DESKTOP
 
 
-// const next = document.querySelector("#next");
-// const prev = document.querySelector("#prev");
-// let slides = document.querySelectorAll(".carousel_slides");
-// let slider = document.querySelector(".carousel");
+const next = document.querySelector("#next");
+const prev = document.querySelector("#prev");
+let slider = document.querySelector(".carousel");
 
-// next.addEventListener('click', Next);
-// prev.addEventListener('click', Previous);
+next.addEventListener('click', Next);
+prev.addEventListener('click', Previous);
 
-// function Next(params) {
-//     let currentSlide = slider.querySelector(".carousel_slides--actif");
-//     let nextSlide = currentSlide.nextElementSibling;
+function Next(params) {
+    if (window.innerWidth > 768) {
+        let currentSlide = slider.querySelector(".carousel_slides--actif");
+        let nextSlide = currentSlide.nextElementSibling;
 
-//     if (!nextSlide) {
-//         nextSlide = currentSlide.parentNode.firstElementChild;
-//     }
-//     console.log(nextSlide);
-//     for (const el of slides) {
-//         el.classList.remove("carousel_slides--actif", "carousel_slides--over");
-//     }
-//     currentSlide.classList.add("carousel_slides--over");
+        if (!nextSlide) {
+            nextSlide = currentSlide.parentNode.firstElementChild;
+        }
+        console.log(nextSlide);
+        for (const el of slides) {
+            el.classList.remove("carousel_slides--actif", "carousel_slides--over");
+        }
+        currentSlide.classList.add("carousel_slides--over");
 
-//     nextSlide.classList.add("carousel_slides--actif");
+        nextSlide.classList.add("carousel_slides--actif");
 
-// }
-// function Previous(params) {
-//     let currentSlide = slider.querySelector(".carousel_slides--actif");
-//     let prevSlide = currentSlide.previousElementSibling;
+    } else {
 
-//     if (!prevSlide) {
-//         prevSlide = currentSlide.parentNode.lastElementChild;
-//     }
-//     console.log(prevSlide);
-//     for (const el of slides) {
-//         el.classList.remove("carousel_slides--actif", "carousel_slides--over");
-//     }
-//     currentSlide.classList.add("carousel_slides--over");
-//     prevSlide.classList.add("carousel_slides--actif");
+    }
+
+}
+function Previous(params) {
+    if (window.innerWidth > 768) {
+
+        let currentSlide = slider.querySelector(".carousel_slides--actif");
+        let prevSlide = currentSlide.previousElementSibling;
+
+        if (!prevSlide) {
+            prevSlide = currentSlide.parentNode.lastElementChild;
+        }
+        console.log(prevSlide);
+        for (const el of slides) {
+            el.classList.remove("carousel_slides--actif", "carousel_slides--over");
+        }
+        currentSlide.classList.add("carousel_slides--over");
+        prevSlide.classList.add("carousel_slides--actif");
+
+    } else {
+
+    }
 
 
-// }
+}
