@@ -1,0 +1,203 @@
+//Navigation
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100vw;
+    background: none;
+    padding: 0;
+
+    .logo {
+        cursor: pointer;
+    }
+
+    .nav-links {
+        position: fixed;
+        z-index: 1s;
+        top: -10vw;
+        right: -40vw;
+        height: 50vh;
+        border-radius: 100%;
+        background-color: #DBBEA1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50vh;
+        transform-origin: top right;
+        transition: transform 0.5s ease-in-out;
+        opacity: 0;
+
+        li {
+            list-style: none;
+            opacity: 0;
+        }
+
+        a {
+            color: #512500;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 80px;
+            margin-top: 40px;
+            font-family: "larken", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        a {
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        a::before,
+        a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0;
+        }
+
+        a::before {
+            background-color: #54b3d6;
+            height: 2px;
+            bottom: 0;
+            transform-origin: 100% 50%;
+            transform: scaleX(0);
+            transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        a::after {
+            content: attr(data-replace);
+            height: 100%;
+            top: 0;
+            transform-origin: 100% 50%;
+            transform: translate3d(200%, 0, 0);
+            transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+            color: #54b3d6;
+        }
+
+        a:hover::before {
+            transform-origin: 0% 50%;
+            transform: scaleX(1);
+        }
+
+        a:hover::after {
+            transform: translate3d(0, 0, 0);
+        }
+
+
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        z-index: 0;
+
+        div {
+            width: 25px;
+            height: 3px;
+            background-color: #512500;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+.toggle {
+    .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .line2 {
+        opacity: 0;
+    }
+
+    .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+.nav-active {
+    animation-name: burgerMenu;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes burgerMenu {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+//DESKTOP
+
+@media screen and (min-width: 768px) {
+    nav {
+        height: 40px;
+        line-height: auto;
+
+        .nav-links {
+            position: initial;
+            flex-direction: row;
+            height: 20px;
+            transform: initial;
+            justify-content: space-around;
+            width: auto;
+            opacity: 1;
+            background: none;
+
+
+            li {
+                opacity: 1;
+
+            }
+
+            a {
+                margin: 22px;
+                height: auto;
+            }
+        }
+
+        .burger {
+            display: none;
+        }
+    }
+
+}

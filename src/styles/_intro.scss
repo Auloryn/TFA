@@ -1,0 +1,95 @@
+//section intro mobile
+
+.section--intro {
+    width: 100vw;
+    grid-template-rows: repeat(4, auto);
+    grid-row-gap: 0px;
+
+
+    .intro__list {
+        padding: 0;
+        grid-area: 1 / 1 / 2 / 6;
+    }
+
+    .title {
+
+        font-size: 80px;
+        margin: 20px 0;
+    }
+
+    .title--under {
+        font-size: 14px;
+        margin: 20px;
+    }
+
+    .text {
+        grid-area: 4 / 1 / 5 / 6;
+        margin: 0 20px;
+    }
+
+    .text--bold {
+        font-weight: 700;
+        grid-area: 3 / 1 / 4 / 4;
+    }
+
+
+
+    .img--intro {
+        height: 320px;
+        position: absolute;
+        right: 0;
+        top: 30vh;
+        z-index: -1;
+    }
+
+
+
+
+}
+
+//section intro desktop
+
+@media screen and (min-width: 768px) {
+
+
+    .section--intro {
+        grid-template-rows: none;
+        height: 95vh;
+
+        .intro__list {
+            grid-column: 1/5;
+            justify-self: right;
+
+            .title {
+                height: 80px;
+                font-size: 124px;
+                margin: 0;
+                margin-top: 88px;
+            }
+
+            .title--under {
+                font-size: 16px;
+                margin-top: 16px;
+                text-align: right;
+            }
+
+
+        }
+
+
+        .text {
+            grid-column: 1/5;
+        }
+
+        .text--bold {
+            font-size: 31px;
+            line-height: 35px;
+        }
+
+        .img--intro {
+            grid-column: 5/8;
+            src: url(../assets/images/st_bernard.png);
+            height: 40vw;
+        }
+    }
+}

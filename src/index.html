@@ -65,8 +65,12 @@
         avenir où respecter la loi et prendre soin de nos chiens vont de pair.
 
         Rejoignez DOGWISE dès maintenant pour un élevage canin responsable.</p>
-      <img class="img img--intro" src="./assets/images/pomeranian.png" srcset="./assets/images/pomeranian@2x.png 767w"
-        alt="Un chien qui regarde le texte">
+      <picture>
+        <source class="img img--intro" media="(max-width: 767px)" srcset="./assets/images/pomeranian@2x.png" />
+        <source class="img img--intro" media="(min-width: 768px)" srcset="./assets/images/st_bernard@2x.png" />
+        <img class="img img--intro" src="./assets/images/pomeranian.png" srcset="./assets/images/pomeranian@2x.png 767w"
+          alt="Un chien qui regarde le texte">
+      </picture>
     </section>
   </main>
 

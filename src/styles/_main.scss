@@ -1,0 +1,51 @@
+body {
+    font-size: 20px;
+    line-height: 31px;
+    font-family: 'Mukta', sans-serif;
+    scroll-behavior: smooth;
+    color: #512500;
+    margin: 0;
+    background-color: #FAF4ED;
+    overflow-x: hidden;
+
+}
+
+//section
+
+.section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+}
+
+.title {
+    color: #512500;
+    font-family: "larken", sans-serif;
+    height: auto;
+}
+
+.title--second {
+    font-size: 40px;
+    margin-left: 20px;
+    height: auto;
+}
+
+//DESKTOP
+
+@media screen and (min-width: 768px) {
+
+    body {
+        font-size: 22px;
+        min-width: 55ch;
+        max-width: 100px;
+        line-height: 31px;
+    }
+
+    //section desktop
+    .section {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-column-gap: 22px;
+    }
+}

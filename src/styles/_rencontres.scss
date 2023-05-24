@@ -1,0 +1,286 @@
+//section rencontres mobile
+
+
+.section--rencontres {
+    display: block;
+
+    .carousel {
+        height: 200vh;
+        position: relative;
+        width: 100vw;
+        overflow: hidden;
+        background-image: url(../assets/images/background1_carousel.svg), url(../assets/images/background2_carousel.svg);
+        background-size: 120vw, 200%;
+        background-repeat: no-repeat;
+        background-position: top center, center 373px;
+
+
+        .slides-container {
+            display: flex;
+            width: 400%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel_slides {
+            width: 25%;
+            padding: 15px;
+
+            .carousel__image {
+                width: 80%;
+                margin-left: 10%;
+                margin-top: 40px;
+                margin-bottom: 80px;
+
+
+            }
+
+        }
+
+        .carousel__button {
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            transform: translateY(-50%);
+            height: 80px;
+            width: 80px;
+            background-image: url(../assets/images/carousel-btn.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: white;
+            border-radius: 55px 40px 45px 25px;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+
+            .btn--content {
+                text-indent: 200%;
+                white-space: nowrap;
+                position: absolute;
+            }
+        }
+    }
+
+    #prev {
+        left: 10%;
+        top: 90%;
+    }
+
+    #next {
+        right: 10%;
+        top: 90%;
+    }
+
+
+
+    @media (max-width: 600px) {
+        .carousel {
+            .carousel__button {
+                padding: 5px 10px;
+            }
+        }
+    }
+
+    .text {
+        margin: 20px;
+    }
+}
+
+
+//section rencontres desktop
+
+@media screen and (min-width: 768px) {
+    .section--rencontres {
+        display: block;
+        width: 100vw;
+
+        .carousel {
+            position: relative;
+            height: 140vh;
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+            background-image: url(../assets/images/background2_carousel.svg), url(../assets/images/background1_carousel.svg);
+            background-position: 35vw top, 22px top;
+            background-repeat: no-repeat, no-repeat;
+            background-size: 100vh, 80vh;
+
+            .carousel_slides {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+
+            .carousel__image {
+                height: 35vh;
+                width: auto;
+            }
+
+            .carousel__img {
+                position: absolute;
+                left: 10%;
+                bottom: -200vh;
+            }
+
+            .carousel__txt {
+                position: absolute;
+                left: 40vw;
+                right: 10vw;
+                bottom: 200vh;
+                max-width: 100ch;
+                width: 40vw;
+            }
+
+            .carousel_slides--actif {
+
+                .carousel__img {
+                    animation: up 1s;
+                    animation-fill-mode: forwards;
+                }
+
+                .carousel__txt {
+
+                    animation: down 1s;
+                    animation-fill-mode: forwards;
+
+                }
+
+                .carousel__txt--beautiful {
+                    animation: down-B 1s;
+                    animation-fill-mode: forwards;
+
+                }
+
+                .carousel__txt--malmaison {
+                    animation: down-M 1s;
+                    animation-fill-mode: forwards;
+                }
+            }
+
+            .carousel_slides--over {
+                .carousel__img {
+                    animation: up-end 1s;
+                    animation-fill-mode: forwards;
+                }
+
+                .carousel__txt {
+                    animation: down-end 1s;
+                    animation-fill-mode: forwards;
+
+                }
+
+                .carousel__txt--bouilles {
+                    animation: down-end-B 1s;
+                    animation-fill-mode: forwards;
+
+                }
+
+                .carousel__txt--malmaison {
+                    animation: down-end-M 1s;
+                    animation-fill-mode: forwards;
+
+                }
+            }
+
+            @keyframes up {
+                to {
+                    transform: translateY(-280vh);
+                }
+            }
+
+            @keyframes down {
+                to {
+                    transform: translateY(160vh);
+                }
+            }
+
+
+            @keyframes down-B {
+                to {
+                    transform: translateY(150vh);
+                }
+            }
+
+            @keyframes down-M {
+                to {
+                    transform: translateY(140vh);
+                }
+            }
+
+
+            @keyframes up-end {
+                from {
+                    transform: translateY(-290vh);
+
+                }
+
+                to {
+                    transform: translateY(-490vh);
+                }
+            }
+
+            @keyframes down-end {
+                from {
+                    transform: translateY(160vh);
+
+                }
+
+                to {
+                    transform: translateY(320vh);
+                }
+            }
+
+            @keyframes down-end-B {
+                from {
+                    transform: translateY(150vh);
+
+                }
+
+                to {
+                    transform: translateY(320vh);
+                }
+            }
+
+            @keyframes down-end-M {
+                from {
+                    transform: translateY(140vh);
+
+                }
+
+                to {
+                    transform: translateY(320vh);
+                }
+            }
+
+
+            .carousel__button {
+                position: absolute;
+                top: 50%;
+
+                &#prev {
+                    left: 44px;
+                    top: 50%;
+                    background-color: #DBBEA1;
+                    background-image: url(../assets/images/prev_btn.svg);
+
+                }
+
+                &#next {
+                    right: 44px;
+                    top: 50%;
+
+                }
+            }
+        }
+
+        .text--rencontres {
+            max-width: 70ch;
+        }
+    }
+}
