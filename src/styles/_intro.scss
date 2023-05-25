@@ -4,6 +4,7 @@
     width: 100vw;
     grid-template-rows: repeat(4, auto);
     grid-row-gap: 0px;
+    margin-top: 40px;
 
 
     .intro__list {
@@ -32,8 +33,6 @@
         grid-area: 3 / 1 / 4 / 4;
     }
 
-
-
     .img--intro {
         height: 320px;
         position: absolute;
@@ -55,6 +54,8 @@
     .section--intro {
         grid-template-rows: none;
         height: 95vh;
+        margin-top: 44px;
+
 
         .intro__list {
             grid-column: 1/5;

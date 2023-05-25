@@ -2,35 +2,68 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
+
 //navigation
+const section = document.querySelectorAll("section");
+const nav = document.querySelector("nav__menu");
+const navList = document.querySelectorAll(".nav__menu li");
 
-document.addEventListener('DOMContentLoaded', function () {
-    const navSlide = () => {
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('.nav-links');
-        const navLinks = document.querySelectorAll('.nav-links li');
+const options = {
+    threshold: "0.3"
+};
 
-        burger.addEventListener('click', () => {
-            // Toggle Nav
-            nav.classList.toggle('nav-active');
-
-            // Animate Links
-            navLinks.forEach((link, index) => {
-                if (link.style.animation) {
-                    link.style.animation = '';
-                } else {
-                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 1}s`;
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+        if (e.isIntersecting) {
+            navList.forEach(link => {
+                link.classList.remove("active");
+                if (e.target.id === link.dataset.nav) {
+                    link.classList.add("active");
                 }
-            });
+            })
+        }
+    });
 
-            // Burger Animation
-            burger.classList.toggle('toggle');
-        });
-    }
+}, options);
 
-    navSlide();
-});
+section.forEach(section => {
+    observer.observe(section);
+})
 
+const BurgOpenElement = document.querySelector(".burger__close");
+const BurgElement = document.querySelector(".burger__lines");
+const BurgNav = document.querySelector(".nav__menu");
+BurgElement.addEventListener("click", Menuburger);
+BurgNav.addEventListener("click", Menuburger);
+
+function Menuburger() {
+    BurgOpenElement.classList.toggle("burger__close");
+    BurgOpenElement.classList.toggle("nav-active");
+
+    BurgElement.classList.toggle("toggle");
+
+}
+
+
+//sticky menu
+// Get the navbar container
+const navbar = document.querySelector('.nav');
+
+// Get the offset position of the navbar
+const sticky = 0;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+// function Sticky() {
+//     if (window.pageYOffset > sticky) {
+//         navbar.classList.add("sticky")
+//     } else {
+//         navbar.classList.remove("sticky");
+//     }
+
+
+// }
+// listen for the scroll event to invoke the function
+// window.addEventListener('scroll', Sticky);
 
 
 //CAROUSEL MOBILE
@@ -98,6 +131,38 @@ document.getElementById('prev').addEventListener('click', function () {
 updateSlidePosition(); // Initialize slide positions when script loads
 
 //Section problèmes mobile
+
+function bigger(params) {
+    // Let's assume the class you want to add is 'active' and the element has an id 'target'
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let target = document.querySelector(".dot4");
+        let observer;
+
+        let observerOptions = {
+            root: null, // relative to document viewport 
+            rootMargin: '0px', // margin around root. Values are similar to css property. Unitless values not allowed
+            threshold: 0.5 // visible amount of item shown in relation to root
+        };
+
+        let observerCallback = function (entries, observer) {
+            entries.forEach(entry => {
+                // if element is visible in viewport, add 'active' class, else remove it
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("bigger");
+                }
+
+            });
+        };
+
+        // instantiate a new Intersection Observer
+        observer = new IntersectionObserver(observerCallback, observerOptions);
+        observer.observe(target); // observe the 'target' element
+    });
+
+}
+// if (window.innerWidth <= 768) {
+// }
 let mm = gsap.matchMedia();
 mm.add("(max-width: 768px)", () => {
     let dot = document.querySelector(".dot4");
@@ -113,6 +178,7 @@ mm.add("(max-width: 768px)", () => {
         },
     });
 });
+
 
 //section problèmes desktop
 mm.add("(min-width: 768px)", () => {

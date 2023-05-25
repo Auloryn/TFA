@@ -7,6 +7,7 @@
     grid-column-gap: 20px;
     grid-row-gap: 20px;
 
+
     .title--select {
         grid-area: 1 / 2 / 2 / 4;
     }
@@ -50,10 +51,20 @@
         justify-self: center;
         align-self: center;
         z-index: -1;
+
+        &.bigger {
+            animation: big 2s forwards;
+        }
+
     }
+
 }
 
-
+@keyframes big {
+    to {
+        transform: scale(80);
+    }
+}
 
 //section selectionné desktop
 

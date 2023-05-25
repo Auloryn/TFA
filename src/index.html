@@ -25,25 +25,22 @@
 
 <body>
   <header>
-    <nav>
-      <div class="logo">
-        <h4>Your Logo</h4>
-      </div>
-      <div class="nav-background"></div>
-      <ul class="nav-links">
-        <li><a class="nav-link" href="#intro">Introduction</a></li>
-        <li><a class="nav-link" href="#rencontres">Rencontres</a></li>
-        <li><a class="nav-link" href="#problemes">Problèmes</a></li>
-        <li><a class="nav-link" href="#solution">Solution</a></li>
-        <li><a class="nav-link" href="#">Fonctionnalités</a></li>
-        <li><a class="nav-link" href="#">Élaboration</a></li>
 
-      </ul>
-      <div class="burger">
+
+    <nav class="nav">
+      <div class="burger burger__lines">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
+      <ul class="nav__menu burger__close">
+        <li data-nav="intro" class="nav__menu__el"><a href="#intro">Introduction</a></li>
+        <li data-nav="rencontres" class="nav__menu__el"><a href="#rencontres">Rencontres</a></li>
+        <li data-nav="problemes" class="nav__menu__el"><a href="#problemes">Problèmes</a></li>
+        <li data-nav="solution" class="nav__menu__el"><a href="#solution">Solution</a></li>
+        <li data-nav="fonct" class="nav__menu__el"><a href="#fonct">Fonctionnalités</a></li>
+        <li data-nav="elaboration" class="nav__menu__el"><a href="#elaboration">Élaboration</a></li>
+      </ul>
     </nav>
   </header>
   <main>
@@ -79,7 +76,10 @@
 
   <!-- Rencontres -->
   <section class="section section--rencontres" id="rencontres">
-    <h2 class="title title--second">Rencontres</h2>
+    <div class="title-container">
+      <h2 class="title title--second">Rencontres</h2>
+      <div class="title__underline"></div>
+    </div>
     <div class="carousel">
       <div class="slides-container">
         <div class="carousel_slides carousel_slides--actif">
@@ -206,7 +206,10 @@
   <!-- section problèmes -->
   <div class="scroll-container">
     <section class="section section--problemes" id="problemes">
-      <h2 class="title title--second title--prob">Problèmes</h2>
+      <div class="title-container">
+        <h2 class="title title--second title--prob">Problèmes</h2>
+        <div class="title__underline"></div>
+      </div>
       <div class="timeline-prob"></div>
       <div class="dot dot1"></div>
 
@@ -243,7 +246,7 @@
       </div>
 
     </section>
-    <section class="section section--selectionne" id="select">
+    <section class="section section--selectionne" id="problemes">
       <h2 class="title title--second title--select">Problème sélectionné</h2>
       <div class="timeline-select"></div>
       <div class="dot dot4"></div>
@@ -273,8 +276,13 @@
     </section>
 
   </div>
+
+  <!-- section solution -->
   <section class="section section--solution" id="solution">
-    <h2 class="title title--second">Solution</h2>
+    <div class="title-container">
+      <h2 class="title title--second">Solution</h2>
+      <div class="title__underline"></div>
+    </div>
     <img class="img" src="./assets/images/DEVICES_MOCKUP.png" alt="mockup dans un ordinateur">
     <p class="text">
       Un site web qui rassemble toutes les lois et réglementations relatives à l'élevage canin. Ce site serait une
@@ -291,8 +299,12 @@
       des chiens et des éleveurs canins.
     </p>
   </section>
-  <section class="section section--fonctionnalites">
-    <h2 class="title title--second">Fonctionnalités</h2>
+  <!-- section fonctionnalités -->
+  <section class="section section--fonctionnalites" id="fonct">
+    <div class="title-container">
+      <h2 class="title title--second">Fonctionnalités</h2>
+      <div class="title__underline"></div>
+    </div>
     <img class="img img1" src="assets/images/istockphoto-495097142-612x612.png" alt="dessin de chien">
     <p class="text text1">
       Vérifier si son élevage suit les lois est l’idée principale de ce projet.
@@ -314,6 +326,12 @@
       nombre de chiens de portées, le numéro d’agrément et les formations suivies.
       Ce document peut être un gain de temps pour les contrôles et pour les éleveurs.
     </p>
+  </section>
+  <section class="section section--elaboration" id="elaboration">
+    <div class="title-container">
+      <h2 class="title title--second">Élaboration</h2>
+      <div class="title__underline"></div>
+    </div>
 
   </section>
 </body>

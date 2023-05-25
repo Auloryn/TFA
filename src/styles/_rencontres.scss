@@ -56,7 +56,7 @@
             border-radius: 55px 40px 45px 25px;
 
             &:hover {
-                background-color: rgba(0, 0, 0, 0.7);
+                background-color: #54b3d6;
             }
 
             .btn--content {
@@ -130,7 +130,7 @@
 
             .carousel__txt {
                 position: absolute;
-                left: 40vw;
+                left: 45vw;
                 right: 10vw;
                 bottom: 200vh;
                 max-width: 100ch;
@@ -263,12 +263,17 @@
                 position: absolute;
                 top: 50%;
 
+
                 &#prev {
                     left: 44px;
                     top: 50%;
                     background-color: #DBBEA1;
                     background-image: url(../assets/images/prev_btn.svg);
 
+
+                    &:hover {
+                        background-color: #54b3d6;
+                    }
                 }
 
                 &#next {

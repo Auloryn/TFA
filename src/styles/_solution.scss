@@ -1,19 +1,50 @@
 .section--solution {
-    margin: 22px;
-    width: 100vw;
-    line-height: 1.4;
-    margin-top: -70vh;
+    margin-top: 140px;
+
+    .title-container {
+        grid-column: 1/5;
+    }
+
+    .title {
+        margin: 0;
+    }
 
     .text {
-        grid-column: 4/8;
-        margin: 44px;
+        grid-column: 1/6;
+        margin: 0 22px;
 
     }
 
     .img {
         justify-self: center;
         align-self: center;
-        grid-column: 1/4;
+        grid-column: 1/6;
+        width: 80vw;
+    }
+}
 
+
+//DESkTOP
+
+@media screen and (min-width: 768px) {
+
+    .section--solution {
+        line-height: 1.4;
+        margin-top: 0;
+
+        .title-container {
+            grid-column: 1/8;
+        }
+
+        .text {
+            grid-column: 4/8;
+            margin: 44px;
+        }
+
+        .img {
+            width: 30vw;
+            grid-column: 1/4;
+
+        }
     }
 }

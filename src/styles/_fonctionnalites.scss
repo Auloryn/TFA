@@ -1,5 +1,43 @@
 //Section fonctionnalités
+.section--fonctionnalites {
+    grid-template-rows: none;
 
+    .title-container {
+        grid-column: 1/5;
+        margin-top: 120px;
+    }
+
+    .img {
+        width: 80vw;
+        margin: 80px 0;
+    }
+
+    .text {
+        margin: 0 20px;
+    }
+
+    .img1 {
+        grid-column: 2/5;
+
+    }
+
+    .text1 {
+        grid-column: 1/6;
+    }
+
+    .img2 {
+        grid-column: 2/5;
+    }
+
+    .text2 {
+        grid-column: 1/6;
+    }
+
+    .text--big {
+        font-size: 40px;
+    }
+
+}
 
 //desktop
 
@@ -11,10 +49,9 @@
         width: 100vw;
         justify-items: center;
 
-        .title--second {
-            grid-area: 1 / 1 / 2 / 5;
+        .title-container {
+            grid-area: 1 / 1 / 2 / 8;
             justify-self: left;
-            margin-left: 44px;
         }
 
         .text {
@@ -23,12 +60,13 @@
         }
 
         .text--big {
-            font-size: 31px;
-            font-family: "larken", sans-serif;
+            font-size: 44px;
         }
 
         .img {
             width: 25vw;
+            margin: 44px;
+
         }
 
         .text1 {
