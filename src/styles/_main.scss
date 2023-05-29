@@ -29,7 +29,15 @@ body {
         margin-left: 120px;
         margin-top: 0;
         display: none;
+        font-size: 14px;
     }
+}
+
+.btn--content {
+    text-indent: 200%;
+    white-space: nowrap;
+    position: absolute;
+    overflow: hidden;
 }
 
 //section
@@ -53,6 +61,7 @@ body {
 .btn--up {
     display: none;
 }
+
 
 
 //DESKTOP
@@ -102,12 +111,15 @@ body {
 
         .title--second {
             margin-bottom: 10px;
+            font-size: 44px;
         }
 
         .title__underline {
             width: 60vw;
             height: 3px;
             display: block;
+            font-size: 16px;
+
         }
     }
 

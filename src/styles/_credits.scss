@@ -6,5 +6,28 @@
     .credits__list {
         margin-left: 80px;
         list-style: none;
+
+        .link {
+            margin-top: 40px;
+        }
+
+        .link a {
+            color: #548ad6;
+            text-decoration: none;
+            margin: 20px;
+            --c: no-repeat linear-gradient(#54b3d6 0 0);
+            background:
+                var(--c) calc(-101% + var(--p, 0%)) 100%,
+                var(--c) calc(201% - var(--p, 0%)) 0;
+            background-size: 50.1% var(--p, .08em);
+            transition: .3s var(--t, 0s), background-position .3s calc(.3s - var(--t, 0s));
+
+            &:hover {
+                --p: 101%;
+                --t: 0.3s;
+                color: black;
+            }
+
+        }
     }
 }

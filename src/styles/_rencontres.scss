@@ -59,22 +59,21 @@
                 background-color: #54b3d6;
             }
 
-            .btn--content {
-                text-indent: 200%;
-                white-space: nowrap;
-                position: absolute;
-            }
         }
     }
 
     #prev {
         left: 10%;
         top: 90%;
+        transform: rotate(90deg);
+
     }
 
     #next {
         right: 10%;
         top: 90%;
+        transform: rotate(-90deg);
+
     }
 
 
@@ -119,7 +118,6 @@
 
             .carousel__image {
                 height: 35vh;
-                width: auto;
             }
 
             .carousel__img {
@@ -188,6 +186,7 @@
                 }
             }
 
+
             @keyframes up {
                 to {
                     transform: translateY(-280vh);
@@ -209,7 +208,7 @@
 
             @keyframes down-M {
                 to {
-                    transform: translateY(140vh);
+                    transform: translateY(150vh);
                 }
             }
 
@@ -249,7 +248,7 @@
 
             @keyframes down-end-M {
                 from {
-                    transform: translateY(140vh);
+                    transform: translateY(150vh);
 
                 }
 
@@ -269,16 +268,19 @@
                     top: 50%;
                     background-color: #DBBEA1;
                     background-image: url(../assets/images/prev_btn.svg);
-
+                    transform: rotate(180deg);
 
                     &:hover {
                         background-color: #54b3d6;
+
                     }
                 }
 
                 &#next {
                     right: 44px;
                     top: 50%;
+                    transform: rotate(0deg);
+
 
                 }
             }

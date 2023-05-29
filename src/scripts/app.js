@@ -180,36 +180,6 @@ mm.add("(max-width: 768px)", () => {
 });
 
 
-//section problèmes desktop
-mm.add("(min-width: 768px)", () => {
-    let dot = document.querySelector(".dot4");
-
-    gsap.to(".scroll-container", {
-        x: -window.innerWidth,
-        scrollTrigger: {
-            trigger: ".scroll-container",
-            start: "top top",
-            scrub: true,
-            pin: true,
-        },
-
-    });
-
-    gsap.to(dot, {
-        scale: 10,
-        x: 700,
-        y: -75,
-        duration: 2,
-        scrollTrigger: {
-            trigger: dot,
-            start: "left 50vh",
-            end: "bottom bottom",
-        },
-    });
-
-});
-
-
 //CAROUSEL DESKTOP
 
 
@@ -261,6 +231,36 @@ function Previous(params) {
 
     }
 }
+
+
+//section problèmes desktop
+mm.add("(min-width: 768px)", () => {
+    let dot = document.querySelector(".dot4");
+
+    gsap.to(".scroll-container", {
+        x: -window.innerWidth,
+        scrollTrigger: {
+            trigger: ".scroll-container",
+            start: "top top",
+            scrub: true,
+            pin: true,
+        },
+
+    });
+
+    gsap.to(dot, {
+        scale: 10,
+        x: 700,
+        y: -75,
+        duration: 2,
+        scrollTrigger: {
+            trigger: dot,
+            start: "left 50vh",
+            end: "bottom bottom",
+        },
+    });
+
+});
 
 //Bouton qui remonte la page
 

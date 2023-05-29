@@ -1,0 +1,87 @@
+.section--uikit {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+    .title {
+        font-size: 88px;
+    }
+
+    .title--second {
+        font-size: 40px;
+    }
+
+    .text--bold {
+        font-weight: 700;
+    }
+
+    .text--big {
+        font-size: 28px;
+    }
+
+    .lien {
+        font-size: 14px;
+        color: #512500;
+        text-decoration: none;
+        font-size: 14px;
+        margin: 20px;
+        --c: no-repeat linear-gradient(#54b3d6 0 0);
+        background:
+            var(--c) calc(-101% + var(--p, 0%)) 100%,
+            var(--c) calc(201% - var(--p, 0%)) 0;
+        background-size: 50.1% var(--p, .08em);
+        transition: .3s var(--t, 0s), background-position .3s calc(.3s - var(--t, 0s));
+
+        &:hover {
+            --p: 101%;
+            --t: 0.3s;
+        }
+    }
+
+    .btn {
+        z-index: 3;
+        height: 80px;
+        width: 60px;
+        background-image: url(../assets/images/fleche_up.svg);
+        background-size: 70px 50px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #DBBEA1;
+        border: none;
+        border-radius: 35% 50% 15%;
+
+        &:hover {
+            background-color: #54b3d6;
+        }
+
+    }
+
+
+}
+
+//desktop
+
+@media screen and (min-width: 768px) {
+    .section--uikit {
+
+        margin: 22px;
+
+        .title {
+            font-size: 88px;
+        }
+
+        .title--second {
+            font-size: 44px;
+        }
+
+        .text--big {
+            font-size: 31px;
+        }
+
+        .lien {
+            font-size: 16px;
+        }
+    }
+
+
+}
