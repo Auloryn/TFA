@@ -11,10 +11,6 @@
   <!-- Favicon -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/zkq4sro.css">
 
 
@@ -47,11 +43,11 @@
     <button class="btn btn--up"></button>
     <!-- introduction -->
     <section class="section section--intro" id="intro">
-      <ul class="intro__list">
+      <div class="intro__list">
         <h1 class="title">DOGWISE</h1>
         <p class="title title--under">Dog Breeders’ Web Information
           and Support Exchange</p>
-      </ul>
+      </div>
 
       <p class="text text--bold">Découvrez DOGWISE, la plateforme essentielle pour les éleveurs de chiens respectueux
         des
@@ -69,7 +65,7 @@
         <source class="img img--intro" media="(max-width: 767px)" srcset="./assets/images/pomeranian@2x.png" />
         <source class="img img--intro" media="(min-width: 768px)" srcset="./assets/images/st_bernard@2x.png" />
         <img class="img img--intro" src="./assets/images/pomeranian.png" srcset="./assets/images/pomeranian@2x.png 767w"
-          alt="Un chien qui regarde le texte">
+          alt="Un chien qui regarde le texte" sizes="100vw">
       </picture>
     </section>
   </main>
@@ -84,10 +80,11 @@
       <div class="slides-container">
         <div class="carousel_slides carousel_slides--actif">
 
-          <div class="carousel__img" id="img1">
-            <img class="carousel__image" src="assets/images/dalmatien.png">
+          <div class="carousel__img">
+            <img class="carousel__image" src="./assets/images/dalmatien.png" alt="croquis d'un dalmatien"
+              srcset="./assets/images/dalmatien@2x.png 2x">
           </div>
-          <div class="carousel__txt" id="slide1">
+          <div class="carousel__txt">
             <h2 class="carousel__text">Dalmatiens Ofthelovespots</h2>
             <p class="carousel__text">Sophie Theys élève des dalmatiens depuis 8 ans. Elle a eu 107 chiots pour le
               moment.
@@ -111,10 +108,11 @@
 
 
         <div class="carousel_slides">
-          <div class="carousel__img" id="img1">
-            <img class="carousel__image" src="assets/images/australian.png" srcset="assets/images/australian@2x.png 2x">
+          <div class="carousel__img">
+            <img class="carousel__image" src="./assets/images/australian.png"
+              alt="croquis d'un berger australien adulte" srcset="./assets/images/australian@2x.png 2x">
           </div>
-          <div class="carousel__txt carousel__txt--beautiful" id="slide1">
+          <div class="carousel__txt carousel__txt--beautiful">
             <h2 class="carousel__text">Beautiful Poison</h2>
             <p class="carousel__text">Franca est éleveuse de berger australien et berger américain.
               <br><br>
@@ -137,10 +135,11 @@
 
 
         <div class="carousel_slides">
-          <div class="carousel__img" id="img1">
-            <img class="carousel__image" src="assets/images/istockphoto-1408210534-612x612.png">
+          <div class="carousel__img">
+            <img class="carousel__image" src="./assets/images/golden.png" alt="croquis d'un golden retriever adulte"
+              srcset="./assets/images/golden@2x.png 2x">
           </div>
-          <div class="carousel__txt carousel__txt--malmaison" id="slide1">
+          <div class="carousel__txt carousel__txt--malmaison">
             <h2 class="carousel__text">
               Elevage du château de Malmaison
             </h2>
@@ -165,10 +164,11 @@
 
 
         <div class="carousel_slides">
-          <div class="carousel__img" id="img1">
-            <img class="carousel__image" src="assets/images/istockphoto-495097142-612x612.png">
+          <div class="carousel__img">
+            <img class="carousel__image" src="./assets/images/australian.png" alt="croquis d'un berger australien"
+              srcset="./assets/images/australian@2x.png 2x">
           </div>
-          <div class="carousel__txt carousel__txt--bouilles" id="slide1">
+          <div class="carousel__txt carousel__txt--bouilles">
             <h2 class="carousel__text">Elevage des bonnes bouilles</h2>
             <p class="carousel__text">Cet élevage familial est composé de berger américain et de berger des shetland et
               est actif depuis 10 ans.
@@ -204,77 +204,78 @@
     </p>
   </section>
   <!-- section problèmes -->
-  <div class="scroll-container">
-    <section class="section section--problemes" id="problemes">
-      <div class="title-container">
-        <h2 class="title title--second title--prob">Problèmes</h2>
-        <div class="title__underline"></div>
-      </div>
-      <div class="timeline-prob"></div>
-      <div class="dot dot1"></div>
+  <div class="id-container" id="problemes">
+    <div class="scroll-container">
+      <section class="section section--problemes">
+        <div class=" title-container">
+          <h2 class="title title--second title--prob">Problèmes</h2>
+          <div class="title__underline"></div>
+        </div>
+        <div class="timeline-prob"></div>
+        <div class="dot dot1"></div>
 
-      <div class="number-container container1">
-        <p class="number ">01</p>
-        <p class="text">Choisir des familles entre tous les candidats est une décision importante. Chaque chiot
-          ayant ses
-          besoins,
-          il leur faut un foyer approprié.
+        <div class="number-container container1">
+          <p class="number ">01</p>
+          <p class="text">Choisir des familles entre tous les candidats est une décision importante. Chaque chiot
+            ayant ses
+            besoins,
+            il leur faut un foyer approprié.
 
-          Entre les revendeurs, les achats impulsifs, les cadeaux de Noël, etc, les éleveurs ne savent plus comment
-          faire confiance aux gens et ils deviennent trop exigeants pour vendre leurs chiots. </p>
-      </div>
-      <div class="dot dot2"></div>
+            Entre les revendeurs, les achats impulsifs, les cadeaux de Noël, etc, les éleveurs ne savent plus comment
+            faire confiance aux gens et ils deviennent trop exigeants pour vendre leurs chiots. </p>
+        </div>
+        <div class="dot dot2"></div>
 
-      <div class="number-container container2">
-        <p class="number">03</p>
-        <p class="text">Les lois sont changeantes, depuis le dernier décret, il est bien plus difficile de créer son
-          élevage.
+        <div class="number-container container2">
+          <p class="number">03</p>
+          <p class="text">Les lois sont changeantes, depuis le dernier décret, il est bien plus difficile de créer son
+            élevage.
 
-          Savoir si l’établissement respecte bien toutes les règlementations n’est pas une mince affaire.</p>
+            Savoir si l’établissement respecte bien toutes les règlementations n’est pas une mince affaire.</p>
 
-      </div>
+        </div>
 
-      <div class="dot dot3"></div>
-      <div class="number-container container3">
-        <p class="number ">02</p>
-        <p class="text">Afin de maintenir une génétique en bonne santé, les éleveurs s’assurent que les chiens
-          prévus pour les
-          saillies n’ont aucune consanguinité.
+        <div class="dot dot3"></div>
+        <div class="number-container container3">
+          <p class="number ">02</p>
+          <p class="text">Afin de maintenir une génétique en bonne santé, les éleveurs s’assurent que les chiens
+            prévus pour les
+            saillies n’ont aucune consanguinité.
 
-          Ce n’est pas toujours simple de trouver le chien qui correspond aux critères recherchés. Les éleveurs vont
-          donc chercher à l’international afin de trouver la perle rare pour faire une ou plusieurs portées. </p>
-      </div>
+            Ce n’est pas toujours simple de trouver le chien qui correspond aux critères recherchés. Les éleveurs vont
+            donc chercher à l’international afin de trouver la perle rare pour faire une ou plusieurs portées. </p>
+        </div>
 
-    </section>
-    <section class="section section--selectionne" id="problemes">
-      <h2 class="title title--second title--select">Problème sélectionné</h2>
-      <div class="timeline-select"></div>
-      <div class="dot dot4"></div>
-      <p class="number number--big">03</p>
-      <p class="text text--select"><span class="text--big"> Les nouvelles réglementations imposées par le décret du
-          1er mars ont créé de
-          nombreuses
-          difficultés pour
-          les éleveurs canins. En effet, ces règles strictes en matière de conditions d’élevage sont difficiles à
-          respecter et à suivre pour les petits élevages et les éleveurs indépendants.</span><br><br>
+      </section>
+      <section class="section section--selectionne">
+        <h2 class="title title--second title--select">Problème sélectionné</h2>
+        <div class="timeline-select"></div>
+        <div class="dot dot4"></div>
+        <p class="number number--big">03</p>
+        <p class="text text--select"><span class="text--big"> Les nouvelles réglementations imposées par le décret du
+            1er mars ont créé de
+            nombreuses
+            difficultés pour
+            les éleveurs canins. En effet, ces règles strictes en matière de conditions d’élevage sont difficiles à
+            respecter et à suivre pour les petits élevages et les éleveurs indépendants.</span><br><br>
 
-        Il est particulièrement difficile pour les éleveurs canins de s’assurer que
-        toutes les lois
-        sont
-        respectées, car les réglementations sont complexes et en constante évolution. Les éleveurs doivent
-        investir
-        dans des installations spécifiques pour garantir la sécurité et le bien-être des animaux, mais ils n’ont
-        pas
-        toujours les moyens financiers pour le faire.<br><br>
+          Il est particulièrement difficile pour les éleveurs canins de s’assurer que
+          toutes les lois
+          sont
+          respectées, car les réglementations sont complexes et en constante évolution. Les éleveurs doivent
+          investir
+          dans des installations spécifiques pour garantir la sécurité et le bien-être des animaux, mais ils n’ont
+          pas
+          toujours les moyens financiers pour le faire.<br><br>
 
-        De plus, la formation requise pour obtenir le certificat de capacité est complexe et coûteuse, ce qui rend
-        difficile pour les éleveurs d’accéder à cette certification. Il est donc important de trouver des
-        solutions
-        pour accompagner les éleveurs canins dans la mise en place de ces nouvelles réglementations, tout en
-        garantissant le bien-être des animaux et le respect des normes éthiques.
-      </p>
-    </section>
-
+          De plus, la formation requise pour obtenir le certificat de capacité est complexe et coûteuse, ce qui rend
+          difficile pour les éleveurs d’accéder à cette certification. Il est donc important de trouver des
+          solutions
+          pour accompagner les éleveurs canins dans la mise en place de ces nouvelles réglementations, tout en
+          garantissant le bien-être des animaux et le respect des normes éthiques.
+        </p>
+      </section>
+    </div>
   </div>
 
   <!-- section solution -->
@@ -283,7 +284,8 @@
       <h2 class="title title--second">Solution</h2>
       <div class="title__underline"></div>
     </div>
-    <img class="img" src="./assets/images/DEVICES_MOCKUP.png" alt="mockup dans un ordinateur">
+    <img class="img" src="./assets/images/DEVICES_MOCKUP.png" alt="mockup dans un ordinateur"
+      srcset="./assets/images/DEVICES_MOCKUP@2x.png 2x">
     <p class="text">
       Un site web qui rassemble toutes les lois et réglementations relatives à l'élevage canin. Ce site serait une
       ressource précieuse pour les éleveurs canins qui cherchent à respecter les réglementations en vigueur et à éviter
@@ -305,7 +307,8 @@
       <h2 class="title title--second">Fonctionnalités</h2>
       <div class="title__underline"></div>
     </div>
-    <img class="img img1" src="assets/images/istockphoto-495097142-612x612.png" alt="dessin de chien">
+    <img class="img img1" src="./assets/images/westie.png" srcset="./assets/images/westie@2x.png 2x"
+      alt="croquis d'un westie adulte">
     <p class="text text1">
       Vérifier si son élevage suit les lois est l’idée principale de ce projet.
       <br><br>
@@ -315,7 +318,8 @@
       élevage. Grâce à ces données, le site pourrait détecter si chaque loi est respectée et il pourrait dire ce qu’il
       faut adapter pour être conforme.
     </p>
-    <img class="img img2" src="assets/images/istockphoto-1408210534-612x612.png" alt="dessin de chien">
+    <img class="img img2" src="./assets/images/lab.png" srcset="./assets/images/lab@2x.png 2x"
+      alt="croquis d'un labrador">
     <p class="text text2">
       Une fois en ordre, il sera possible de regrouper chaque information donnée afin d’en créer un pdf récapitulatif.
       <br><br>
@@ -332,7 +336,8 @@
       <h2 class="title title--second">Élaboration</h2>
       <div class="title__underline"></div>
     </div>
-    <img class="img" src="./assets/images/australian.png" alt="Croquis d'un chien">
+    <img class="img" src="./assets/images/beagle.png" srcset="./assets/images/beagle@2x.png 2x"
+      alt="Croquis d'un beagle qui dort">
     <div class="text-container">
 
       <p class="text">
@@ -354,8 +359,17 @@
         d’aider les différents éleveurs de Belgique
       </p>
     </div>
-
   </section>
+  <footer>
+    <ul class="footer__list">
+      <li class="footer-link"><a class="link" href="credits.html">Crédits</a></li>
+      <li class="footer-link"><a class="link" href="#">UI-Kit</a></li>
+      <li class="footer-link"><a class="link" href="#">Instagram</a></li>
+    </ul>
+    <div class="copyright">
+      &copy; 2023 de Longrée Laureline
+    </div>
+  </footer>
 </body>
 
 </html>

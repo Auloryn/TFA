@@ -1,0 +1,10 @@
+.section--credits {
+
+    display: flex;
+    flex-direction: column;
+
+    .credits__list {
+        margin-left: 80px;
+        list-style: none;
+    }
+}
