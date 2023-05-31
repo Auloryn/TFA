@@ -52,29 +52,16 @@ const navbar = document.querySelector('.nav');
 // Get the offset position of the navbar
 const sticky = 0;
 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-// function Sticky() {
-//     if (window.pageYOffset > sticky) {
-//         navbar.classList.add("sticky")
-//     } else {
-//         navbar.classList.remove("sticky");
-//     }
-
-
-// }
-// listen for the scroll event to invoke the function
-// window.addEventListener('scroll', Sticky);
-
 
 //CAROUSEL MOBILE
 let slideIndex = 0;
-let startX = 0; // To store the starting X position of the touch
-let endX = 0; // To store the ending X position of the touch
+let startX = 0;
+let endX = 0;
 const slides = document.querySelectorAll('.carousel_slides');
 const totalSlides = slides.length;
 
 function updateSlidePosition() {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1000) {
 
         const slideWidth = slides[0].offsetWidth;
         let newTranslateX = -slideIndex * slideWidth;
@@ -86,24 +73,19 @@ function updateSlidePosition() {
 
 }
 
-window.addEventListener('resize', updateSlidePosition); // Adjust slide positions when window is resized
+window.addEventListener('resize', updateSlidePosition);
 
-// Touch event listeners
 document.querySelector('.carousel').addEventListener('touchstart', (e) => {
     startX = e.touches[0].clientX;
 });
 
 document.querySelector('.carousel').addEventListener('touchend', (e) => {
     endX = e.changedTouches[0].clientX;
-    // Compare the start and end X positions to determine slide direction
     if (startX > endX + 50) {
-        // Next slide
         slideIndex++;
     } else if (startX + 50 < endX) {
-        // Previous slide
         slideIndex--;
     }
-    // Ensure slide index is within bounds
     if (slideIndex >= totalSlides) {
         slideIndex = 0;
     } else if (slideIndex < 0) {
@@ -128,26 +110,24 @@ document.getElementById('prev').addEventListener('click', function () {
     updateSlidePosition();
 });
 
-updateSlidePosition(); // Initialize slide positions when script loads
+updateSlidePosition();
 
 //Section problèmes mobile
 
 function bigger(params) {
-    // Let's assume the class you want to add is 'active' and the element has an id 'target'
 
     document.addEventListener("DOMContentLoaded", function () {
         let target = document.querySelector(".dot4");
         let observer;
 
         let observerOptions = {
-            root: null, // relative to document viewport 
-            rootMargin: '0px', // margin around root. Values are similar to css property. Unitless values not allowed
-            threshold: 0.5 // visible amount of item shown in relation to root
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
         };
 
         let observerCallback = function (entries, observer) {
             entries.forEach(entry => {
-                // if element is visible in viewport, add 'active' class, else remove it
                 if (entry.isIntersecting) {
                     entry.target.classList.add("bigger");
                 }
@@ -155,16 +135,15 @@ function bigger(params) {
             });
         };
 
-        // instantiate a new Intersection Observer
         observer = new IntersectionObserver(observerCallback, observerOptions);
-        observer.observe(target); // observe the 'target' element
+        observer.observe(target);
     });
 
 }
 // if (window.innerWidth <= 768) {
 // }
 let mm = gsap.matchMedia();
-mm.add("(max-width: 768px)", () => {
+mm.add("(max-width: 1000px)", () => {
     let dot = document.querySelector(".dot4");
 
     gsap.to(dot, {
@@ -191,7 +170,7 @@ next.addEventListener('click', Next);
 prev.addEventListener('click', Previous);
 
 function Next(params) {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 1000) {
         let currentSlide = slider.querySelector(".carousel_slides--actif");
         let nextSlide = currentSlide.nextElementSibling;
 
@@ -212,7 +191,7 @@ function Next(params) {
 
 }
 function Previous(params) {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 1000) {
 
         let currentSlide = slider.querySelector(".carousel_slides--actif");
         let prevSlide = currentSlide.previousElementSibling;
@@ -234,8 +213,8 @@ function Previous(params) {
 
 
 //section problèmes desktop
-mm.add("(min-width: 768px)", () => {
-    let dot = document.querySelector(".dot4");
+let dot = document.querySelector(".dot4");
+mm.add("(min-width: 1000px)", () => {
 
     gsap.to(".scroll-container", {
         x: -window.innerWidth,
@@ -260,6 +239,19 @@ mm.add("(min-width: 768px)", () => {
         },
     });
 
+});
+mm.add("(min-width: 1600px)", () => {
+    gsap.to(dot, {
+        scale: 15,
+        x: 700,
+        y: -75,
+        duration: 2,
+        scrollTrigger: {
+            trigger: dot,
+            start: "left 50vh",
+            end: "bottom bottom",
+        },
+    });
 });
 
 //Bouton qui remonte la page

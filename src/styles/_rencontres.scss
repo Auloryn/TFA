@@ -94,7 +94,7 @@
 
 //section rencontres desktop
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
     .section--rencontres {
         display: block;
         width: 100vw;
@@ -117,7 +117,7 @@
             }
 
             .carousel__image {
-                height: 35vh;
+                height: 20vw;
             }
 
             .carousel__img {
@@ -132,7 +132,7 @@
                 right: 10vw;
                 bottom: 200vh;
                 max-width: 100ch;
-                width: 40vw;
+                width: 35vw;
             }
 
             .carousel_slides--actif {

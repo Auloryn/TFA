@@ -4,13 +4,19 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: 60px;
     width: 100%;
     z-index: 5;
     position: absolute;
     top: 0;
     left: 0;
 
+}
+
+.img--logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 80px;
 }
 
 
@@ -55,6 +61,7 @@
 .nav__menu__el {
     display: flex;
     height: 80px;
+    width: 100vw;
 
     a {
         margin: auto;
@@ -69,7 +76,6 @@
 }
 
 .burger__lines {
-    // margin-right: 30px;
     border: none;
     background: none;
 }
@@ -102,13 +108,7 @@
     background-color: #DBBEA1;
 }
 
-.img--logo {
-    width: 25vw;
-    margin: 0;
-    position: absolute;
-    top: 14px;
-    left: 14px;
-}
+
 
 
 
@@ -165,6 +165,8 @@
         justify-self: right;
         height: 80px;
         background: none;
+        height: 60px;
+
     }
 
     .nav__menu {
@@ -196,6 +198,7 @@
     .nav__menu__el {
         display: flex;
         height: auto;
+        width: auto;
 
         a {
             margin: 20px;
