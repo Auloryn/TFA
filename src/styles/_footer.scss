@@ -14,6 +14,7 @@ footer {
         list-style: none;
     }
 
+
     //footer hover crédit : https://css-tricks.com/cool-hover-effects-using-background-properties/
 
     a {
@@ -67,6 +68,10 @@ footer {
         font-weight: 800;
         height: 100vh;
         place-items: center;
+    }
+
+    p {
+        max-width: 70ch;
     }
 
     .footer-link a {
