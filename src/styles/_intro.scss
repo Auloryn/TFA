@@ -58,7 +58,7 @@
 
         .intro__list {
             grid-column: 1/5;
-            justify-self: right;
+            justify-self: left;
 
             .title {
                 height: 80px;
@@ -95,13 +95,21 @@
         }
     }
 
-    @media screen and (min-width: 1000px) {
+}
 
-        .section--intro {
+@media screen and (min-width: 1000px) {
+
+    .section--intro {
+        .intro__list {
             .title {
                 font-size: 124px;
 
             }
+
+            .title--under {
+                font-size: 16px;
+            }
+
         }
     }
 }
