@@ -69,6 +69,7 @@
 //section selectionné desktop
 
 
+
 @media screen and (min-width: 1000px) {
 
     .scroll-container {
@@ -137,4 +138,17 @@
         }
     }
 
+}
+
+@media screen and (max-width: 1200px) {
+
+    .scroll-container {
+        .section--selectionne {
+            height: 120vh;
+        }
+
+
+
+
+    }
 }
