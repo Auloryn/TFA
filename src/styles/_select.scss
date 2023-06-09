@@ -6,6 +6,7 @@
     grid-template-rows: 40px, 80px, 1fr, 1fr, 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+    margin-bottom: 100px;
 
 
     .title--select {
@@ -36,6 +37,7 @@
     .text--select {
         grid-area: 3 / 2 / 6 / 6;
         margin-right: 22px;
+        margin-left: 22px;
     }
 
     .text--big {
@@ -78,7 +80,7 @@
         .section--selectionne {
             width: 100vw;
             height: 100vh;
-            grid-template-rows: 10vh 40vh 10vh 40vh;
+            grid-template-rows: 10vh 40vh 10vh 1fr;
             row-gap: 0;
 
 
@@ -138,17 +140,14 @@
         }
     }
 
+
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
 
     .scroll-container {
         .section--selectionne {
             height: 120vh;
         }
-
-
-
-
     }
 }
